@@ -1,0 +1,16 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 1rem;
+    
+    &--green{
+        background-color: $color-green;
+
+        &:hover {
+            background-color: $color-green-light;
+        }
+    }
+}

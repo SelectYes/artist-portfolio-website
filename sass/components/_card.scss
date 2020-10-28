@@ -1,0 +1,12 @@
+.card {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid $color-grey-light;
+    border-radius: .5rem;
+    padding: 2rem;
+
+    &:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+}

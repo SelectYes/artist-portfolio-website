@@ -16,5 +16,42 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #2c2c2c;
+  color: #2F4858;
   padding: 3rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
+
+.u-text-muted {
+  color: #adadad; }
+
+.u-form-control {
+  display: inline-block; }
+
+.heading {
+  text-align: center; }
+
+.articles-container {
+  width: 100rem;
+  margin: 0 auto; }
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 1rem; }
+  .btn--green {
+    background-color: #2a9d8f; }
+    .btn--green:hover {
+      background-color: #2fb8a8; }
+
+.card {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+  border-radius: .5rem;
+  padding: 2rem; }
+  .card:not(:last-child) {
+    margin-bottom: 2rem; }
