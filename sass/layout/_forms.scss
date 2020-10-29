@@ -1,0 +1,23 @@
+.form-container {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+
+    &__input {
+        display: block;
+        height: 3rem;
+    }
+
+    &__textarea {
+        display: block;
+        height: 8rem;
+        resize: vertical;
+    }
+}

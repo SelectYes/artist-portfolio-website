@@ -22,35 +22,70 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
-.u-text-muted {
-  color: #adadad; }
+.u-margin-bottom-medium {
+  margin-bottom: 2rem; }
 
-.u-form-control {
-  display: inline-block; }
+.u-margin-top-small {
+  margin-top: 1rem; }
+
+.u-margin-top-medium {
+  margin-top: 2rem; }
+
+.u-text-muted {
+  color: #a0a0a0; }
 
 .heading {
   text-align: center; }
 
 .articles-container {
-  width: 100rem;
+  max-width: 95rem;
   margin: 0 auto; }
+
+.form-container {
+  max-width: 70rem;
+  margin: 0 auto; }
+
+.form-group {
+  display: flex;
+  flex-direction: column; }
+
+.form-control__input {
+  display: block;
+  height: 3rem; }
+
+.form-control__textarea {
+  display: block;
+  height: 8rem;
+  resize: vertical; }
 
 .btn {
   display: inline-block;
   text-decoration: none;
   color: white;
-  padding: 1.5rem;
-  border-radius: 5px;
-  margin: 1rem; }
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border: none; }
+  .btn--submit {
+    padding: 1.44rem;
+    font-size: 1.6rem; }
   .btn--green {
     background-color: #2a9d8f; }
     .btn--green:hover {
       background-color: #2fb8a8; }
+  .btn--blue {
+    background-color: #336699; }
+    .btn--blue:hover {
+      background-color: #3e7dbd; }
+  .btn--grey {
+    background-color: #a0a0a0; }
+    .btn--grey:hover {
+      background-color: #bdbdbd; }
 
 .card {
   width: 95%;
   margin: 0 auto;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #bdbdbd;
   border-radius: .5rem;
   padding: 2rem; }
   .card:not(:last-child) {
