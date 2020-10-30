@@ -1,16 +1,21 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const deleteDB = require('./public/js/delete')
+const methodOverride = require('method-override');
+
 const PORT = 3000;
 
 //IMPORT MODELS
 const Article = require('./models/article');
+const clearDB = require('./public/js/delete');
 
 
 // MONGOOSE CONFIG 
 mongoose.connect('mongodb://localhost:27017/blog', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true
 })
 .then(() => console.log("Connected to DB!"))
 .catch(error => console.log(error.message))
@@ -18,6 +23,7 @@ mongoose.connect('mongodb://localhost:27017/blog', {
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
 
 
 // ROUTES
@@ -30,24 +36,23 @@ app.use(express.static(__dirname + '/public'));
 
 
 //INDEX
-app.get('/', (req, res) => {
-    const articles = [
-        {
-            title: "Test Title",
-            createdAt: new Date(),
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil repudiandae odit suscipit dolor, dolore commodi maxime explicabo necessitatibus, consequuntur labore delectus perspiciatis similique recusandae totam quasi aliquam nam, soluta dolorem."
-        },
-        {
-            title: "Test Title 2",
-            createdAt: new Date(),
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil repudiandae odit suscipit dolor, dolore commodi maxime explicabo necessitatibus, consequuntur labore delectus perspiciatis similique recusandae totam quasi aliquam nam, soluta dolorem."
-        },
-    ];
-
-    res.render('articles/index', {articles: articles});
+app.get('/', async (req, res) => {
+    
+    try {
+        const articles = await Article.find().sort({
+            createdAt: 'desc'
+        });
+        res.render('articles/index', {articles: articles});
+    } catch (error) {
+        console.log(error.message);
+    } 
 });
 
 // ROUTES CONFIG
 app.use('/articles', articlesRouter);
+
+// CLEAR DB
+// deleteDB();
+
 
 app.listen(PORT, () => console.log(`Server has started on port: ${PORT}`));

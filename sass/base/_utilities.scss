@@ -18,3 +18,14 @@
     color: $color-grey-medium;
 }
 
+.u-container {
+    width: 70%;
+    max-width: 70rem;
+    // border: 1px solid $color-grey-light;
+    margin: 0 auto;
+}
+
+.u-form-ctrl-inline {
+    display: inline-block;
+}
+

@@ -11,9 +11,14 @@
   "author": "Leonard Van Riel",
   "license": "ISC",
   "dependencies": {
+    "dompurify": "^2.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "mongoose": "^5.10.11"
+    "jsdom": "^16.4.0",
+    "marked": "^1.2.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.11",
+    "slugify": "^1.4.5"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",
