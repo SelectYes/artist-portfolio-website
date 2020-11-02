@@ -9,11 +9,13 @@
 
 @import "pages/home";
 
-@import "layout/heading";
 @import "layout/grid";
 @import "layout/articles-container";
 @import "layout/forms";
+@import "layout/header";
 
 
 @import "components/button";
 @import "components/card";
+@import "components/navbar";
+// @import "components/slider";

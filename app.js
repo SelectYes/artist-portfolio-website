@@ -28,11 +28,11 @@ app.use(methodOverride('_method'));
 
 // ROUTES
 const articlesRouter = require('./routes/articles');
+const homeRoute = require('./routes/home');
 
 
-// CSS CONFIG
+// MEDIA FOLDER CONFIG
 app.use(express.static(__dirname + '/public'));
-
 
 
 //INDEX
@@ -50,6 +50,7 @@ app.get('/', async (req, res) => {
 
 // ROUTES CONFIG
 app.use('/articles', articlesRouter);
+app.use('/home', homeRoute);
 
 // CLEAR DB
 // deleteDB();

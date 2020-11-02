@@ -1,10 +1,6 @@
 const express = require('express');
 const Article = require('../models/article');
 const router = express.Router();
-const methodOverride = require('method-override');
-const article = require('../models/article');
-
-
 
 router.get('/new', (req, res) => {
     res.render('articles/new', { article: new Article() })
