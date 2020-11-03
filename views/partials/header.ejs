@@ -14,19 +14,39 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__list-item">
-                    <a href="/home" class="nav__list-item-link active">Home</a>
+                    <a href="/home" class="nav__list-item-link 
+                    <% if (obj.active == "home") { %>
+                        <%= obj.activeClass %> 
+                    <% } %>
+                    ">Home</a>
                 </li>
                 <li class="nav__list-item">
-                    <a href="/gallery" class="nav__list-item-link">Gallery</a>
+                    <a href="/gallery" class="nav__list-item-link 
+                    <% if (obj.active == "gallery") { %>
+                        <%= obj.activeClass %> 
+                    <% } %>
+                    ">Gallery</a>
                 </li>
                 <li class="nav__list-item">
-                    <a href="/about" class="nav__list-item-link">About</a>
+                    <a href="/about" class="nav__list-item-link 
+                    <% if (obj.active == "about") { %>
+                        <%= obj.activeClass %> 
+                    <% } %>
+                    ">About</a>
                 </li>
                 <li class="nav__list-item">
-                    <a href="/blog" class="nav__list-item-link">Blog</a>
+                    <a href="/blog" class="nav__list-item-link 
+                    <% if (obj.active == "blog") { %>
+                        <%= obj.activeClass %> 
+                    <% } %>
+                    ">Blog</a>
                 </li>
                 <li class="nav__list-item">
-                    <a href="/contact" class="nav__list-item-link">Contact</a>
+                    <a href="/contact" class="nav__list-item-link 
+                    <% if (obj.active == "contact") { %>
+                        <%= obj.activeClass %> 
+                    <% } %>
+                    ">Contact</a>
                 </li>
             </ul>
         </nav>

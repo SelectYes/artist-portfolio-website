@@ -29,6 +29,8 @@ app.use(methodOverride('_method'));
 // ROUTES
 const articlesRouter = require('./routes/articles');
 const homeRoute = require('./routes/home');
+const galleryRoute = require('./routes/gallery');
+const aboutRoute = require('./routes/about');
 
 
 // MEDIA FOLDER CONFIG
@@ -51,6 +53,8 @@ app.get('/', async (req, res) => {
 // ROUTES CONFIG
 app.use('/articles', articlesRouter);
 app.use('/home', homeRoute);
+app.use('/gallery', galleryRoute);
+app.use('/about', aboutRoute);
 
 // CLEAR DB
 // deleteDB();

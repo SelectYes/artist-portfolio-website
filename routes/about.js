@@ -2,13 +2,12 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-
     const obj = {
-        active: "home",
+        active: "about",
         activeClass: 'active'
     }
 
-    res.render('home/home', {obj: obj});
+    res.render('about/about', {obj: obj});
 });
 
 module.exports = router;
