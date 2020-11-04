@@ -31,6 +31,7 @@ const articlesRouter = require('./routes/articles');
 const homeRoute = require('./routes/home');
 const galleryRoute = require('./routes/gallery');
 const aboutRoute = require('./routes/about');
+const contactRoute = require('./routes/contact');
 
 
 // MEDIA FOLDER CONFIG
@@ -55,6 +56,7 @@ app.use('/articles', articlesRouter);
 app.use('/home', homeRoute);
 app.use('/gallery', galleryRoute);
 app.use('/about', aboutRoute);
+app.use('/contact', contactRoute);
 
 // CLEAR DB
 // deleteDB();

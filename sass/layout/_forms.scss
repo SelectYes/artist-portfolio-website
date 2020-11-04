@@ -2,6 +2,10 @@
     // max-width: 70rem;
     width: 100%;
     margin: 0 auto;
+    padding: 2rem;
+    background-color: $color-charcoal;
+    color: white;
+    // border-radius: 5px;
 }
 
 .form-group {
@@ -14,11 +18,24 @@
     &__input {
         display: block;
         height: 3rem;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__textarea {
         display: block;
-        height: 8rem;
+        height: 10rem;
         resize: vertical;
+        font-family: "Lato", sans-serif;
+        // font-size: 1rem;
+
+
+        &:focus {
+            outline: none;
+        }
     }
+
+    
 }

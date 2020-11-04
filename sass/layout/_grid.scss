@@ -1,7 +1,7 @@
 .grid {
     margin: 0 auto;
     width: 80%;
-    color: grey;
+    animation: fade-in 2s;
 }
 
 .row {
@@ -52,4 +52,13 @@
     .col-3-of-4 {
         width: calc((((100% - (#{$gutter-vertical} * 3)) / 4) * 3) + (#{$gutter-vertical} * 2));
     }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+     to {
+         opacity: 1;
+     }
 }

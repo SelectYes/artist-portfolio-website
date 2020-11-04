@@ -3,11 +3,11 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     const obj = {
-        active: "gallery",
+        active: "contact",
         activeClass: "active"
     };
 
-    res.render('gallery/gallery', {obj: obj});
+    res.render('contact/contact', {obj: obj});
 });
 
 module.exports = router;

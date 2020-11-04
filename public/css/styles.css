@@ -107,7 +107,7 @@ body {
 .grid {
   margin: 0 auto;
   width: 80%;
-  color: grey; }
+  animation: fade-in 2s; }
 
 .row {
   max-width: 114rem;
@@ -137,13 +137,22 @@ body {
   .row .col-3-of-4 {
     width: calc((((100% - (6rem * 3)) / 4) * 3) + (6rem * 2)); }
 
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .articles-container {
   max-width: 95rem;
   margin: 0 auto; }
 
 .form-container {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #2F4858;
+  color: white; }
 
 .form-group {
   display: flex;
@@ -152,11 +161,16 @@ body {
 .form-control__input {
   display: block;
   height: 3rem; }
+  .form-control__input:focus {
+    outline: none; }
 
 .form-control__textarea {
   display: block;
-  height: 8rem;
-  resize: vertical; }
+  height: 10rem;
+  resize: vertical;
+  font-family: "Lato", sans-serif; }
+  .form-control__textarea:focus {
+    outline: none; }
 
 .slideshow {
   width: 80%;
@@ -175,6 +189,7 @@ body {
     margin: 0;
     padding: 0; }
     .slideshow__list-item {
+      margin: 0 auto;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -249,6 +264,15 @@ body {
     background-color: #f8b200; }
     .btn--yellow:hover {
       background-color: #ffc42e; }
+  .btn--contact {
+    color: #2F4858;
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0; }
+    .btn--contact:hover {
+      background-color: #dfdfdf;
+      cursor: pointer; }
 
 .card {
   width: 95%;
