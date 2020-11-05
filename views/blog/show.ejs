@@ -1,4 +1,5 @@
 <%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs', {obj: obj}) %>
 
 <div class="u-container">
     <h1 class="card__title u-margin-bottom-small"> 
@@ -13,16 +14,9 @@
         <img src="<%= article.image %> " alt="blog-image">
     </div>
 
-    <a href="/" class="btn btn--grey">All Articles</a>
-    <a href="/articles/edit/<%= article._id %>" class="btn btn--blue">Edit</a>
+    <a href="/blog" class="btn btn--blue">Back To All Articles</a>
 
     <div class="card__text">
         <%- article.sanitizedHTML %> 
     </div>
 </div>
-
-
-
-
-
-<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/navbar.ejs', {obj: obj}) %>
+
+<div class="u-container">
+    <div class="articles-container">
+        <% articles.forEach(article => { %>
+    
+            <div class="card">
+    
+                <h2 class="card__title u-margin-bottom-small"> 
+                    <%= article.title %> 
+                </h2>
+
+                <div class="card__image-container">
+                    <img src="<%= article.image %> " alt="blog-image">
+                </div>
+    
+                <div class="card__date u-text-muted u-margin-bottom-small">
+                    <%= article.createdAt.toLocaleDateString() %> 
+                </div>
+    
+                <div class="card__text--index">
+                    <%= article.markdown %> 
+                </div>
+
+                <a href="/blog/<%= article.slug %>" class="btn btn--blue">Read More</a>
+            </div>
+        <% }) %> 
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>

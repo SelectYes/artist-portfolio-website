@@ -27,11 +27,13 @@ app.use(methodOverride('_method'));
 
 
 // ROUTES
-const articlesRouter = require('./routes/articles');
+const articlesRoute = require('./routes/articles');
 const homeRoute = require('./routes/home');
 const galleryRoute = require('./routes/gallery');
 const aboutRoute = require('./routes/about');
 const contactRoute = require('./routes/contact');
+const blogRoute = require('./routes/blog');
+
 
 
 // MEDIA FOLDER CONFIG
@@ -40,23 +42,29 @@ app.use(express.static(__dirname + '/public'));
 
 //INDEX
 app.get('/', async (req, res) => {
+
     
     try {
-        const articles = await Article.find().sort({
-            createdAt: 'desc'
-        });
-        res.render('articles/index', {articles: articles});
+
+        const obj = {
+            active: "",
+            activeClass: "active"
+        }
+
+        res.render('home/home', {obj: obj});
+
     } catch (error) {
         console.log(error.message);
     } 
 });
 
 // ROUTES CONFIG
-app.use('/articles', articlesRouter);
+app.use('/articles', articlesRoute);
 app.use('/home', homeRoute);
 app.use('/gallery', galleryRoute);
 app.use('/about', aboutRoute);
 app.use('/contact', contactRoute);
+app.use('/blog', blogRoute);
 
 // CLEAR DB
 // deleteDB();

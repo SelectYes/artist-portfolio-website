@@ -9,4 +9,19 @@
         margin-bottom: 2rem;
     }
 
+    &__image-container img {
+        width: 100%;
+        height: 20rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+    }
+
+    &__text--index {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 }

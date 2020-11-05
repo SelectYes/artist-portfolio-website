@@ -1,4 +1,4 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../partials/header.ejs', {obj: obj}) %>
 
 <div class="u-container">
 
@@ -15,6 +15,10 @@
                 <h2 class="card__title u-margin-bottom-small"> 
                     <%= article.title %> 
                 </h2>
+
+                <div class="card__image-container">
+                    <img src="<%= article.image %> " alt="blog-image">
+                </div>
     
                 <div class="card__date u-text-muted u-margin-bottom-small">
                     <%= article.createdAt.toLocaleDateString() %> 

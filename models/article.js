@@ -29,6 +29,9 @@ const articleSchema = new mongoose.Schema({
     sanitizedHTML: {
         type: String,
         required: true
+    }, 
+    image: {
+        type: String
     }
 });
 

@@ -2,6 +2,27 @@ const express = require('express');
 const Article = require('../models/article');
 const router = express.Router();
 
+router.get('/', async (req, res) => {
+    
+    
+    try {
+
+        const obj = {
+            active: "",
+            activeClass: "active"
+        }
+
+        const articles = await Article.find().sort({
+            createdAt: 'desc'
+        });
+        
+        res.render('articles/index', {obj: obj, articles: articles});
+
+    } catch (error) {
+        console.log(error.message);
+    } 
+});
+
 router.get('/new', (req, res) => {
     res.render('articles/new', { article: new Article() })
 });
@@ -48,6 +69,7 @@ function saveArticleAndRedirect(path) {
         article.title = req.body.title
         article.description = req.body.description
         article.markdown = req.body.markdown
+        article.image = req.body.image
 
         try {
             article = await article.save();
