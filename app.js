@@ -33,6 +33,8 @@ const galleryRoute = require('./routes/gallery');
 const aboutRoute = require('./routes/about');
 const contactRoute = require('./routes/contact');
 const blogRoute = require('./routes/blog');
+const loginRoute = require('./routes/login');
+const registerRoute = require('./routes/register');
 
 
 
@@ -65,8 +67,10 @@ app.use('/gallery', galleryRoute);
 app.use('/about', aboutRoute);
 app.use('/contact', contactRoute);
 app.use('/blog', blogRoute);
+app.use('/login', loginRoute);
+app.use('/register', registerRoute);
 
-// CLEAR DB
+// CLEAR ARTICLE DB
 // deleteDB();
 
 

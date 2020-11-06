@@ -3,10 +3,7 @@ const Article = require('../models/article');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-    
-    
     try {
-
         const obj = {
             active: "",
             activeClass: "active"
