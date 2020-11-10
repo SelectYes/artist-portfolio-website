@@ -1,5 +1,19 @@
 console.log('Connected to main.js');
 
+// burger menu
+const burgerIcon = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav__list');
+
+burgerIcon.addEventListener('click', (e) => {
+    if (!navList.classList.contains('show')) {
+        navList.classList.add('show');
+    } else {
+        navList.classList.remove('show');
+    }
+})
+
+
+
 // HANDLE FORM SUMBIT:
 
 // Your web app's Firebase configuration

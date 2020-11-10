@@ -14,11 +14,11 @@
         margin-bottom: $gutter-horizontal;
     }
 
-    @include clearfix;
+    // @include clearfix;
 
     [class^="col-"] {
-        // background-color: $color-charcoal;
         float: left;
+        // display: flex;
         height: 5rem;
 
         &:not(:last-child) {

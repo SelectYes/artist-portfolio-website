@@ -1,13 +1,15 @@
 <%- include('../partials/header.ejs') %>
 <%- include('../partials/navbar.ejs', {obj: obj}) %>
 
-<section class="grid">
+<div class="about-page-container">
 
-    <div class="row">
-        <div class="col-1-of-2">
+    <div class="about-flexbox">
+
+        <div class="about-flexbox__item">
             <div class="profile-picture"></div>
         </div>
-        <div class="col-1-of-2">
+
+        <div class="about-flexbox__item">
             <div class="about">
                 <h1 class="about__heading">An instinctive contemporary photographer</h1>
 
@@ -19,12 +21,12 @@
 
                 <p class="about__paragraph">Vestibulum vestibulum quis felis at varius. Integer ullamcorper ex sit amet egestas sodales. Morbi tempor dolor justo, at aliquet leo ultricies in. Cras et vestibulum turpis. Quisque vel enim purus. Nullam ac viverra sapien. Nunc maximus mi lorem, vel pulvinar diam sodales eu.</p>
                     
-                <p class="about__paragraph"></p>Praesent id neque vel nibh luctus semper tristique nec ex. Phasellus at purus nec nulla dignissim vehicula id vestibulum tortor. Maecenas a orci pulvinar, rhoncus lacus sodales, venenatis erat.</p>
-
+                <p class="about__paragraph">Praesent id neque vel nibh luctus semper tristique nec ex. Phasellus at purus nec nulla dignissim vehicula id vestibulum tortor. Maecenas a orci pulvinar, rhoncus lacus sodales, venenatis erat.</p>
             </div>
         </div>
-            
     </div>
-</section>
+</div>
+
+
 
 <%- include('../partials/footer.ejs') %>

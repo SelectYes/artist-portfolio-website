@@ -1,0 +1,29 @@
+.footer {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__copyright {
+
+        &--p {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: 1rem;
+        }
+    }
+
+    &__social-links {
+
+        &--icons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            i {
+                font-size: 4rem;
+            }
+        }
+    }
+}

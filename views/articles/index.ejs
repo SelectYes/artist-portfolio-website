@@ -5,6 +5,7 @@
     <div class="heading">
         <h1 class="heading__heading-primary">Blog Articles</h1>
         <a href="/articles/new" class="btn btn--green">New Article</a>
+        <a href="/login/logout" class="btn btn--blue">Logout & Back To Homepage</a>
     </div>
     
     <div class="articles-container">
@@ -28,7 +29,7 @@
                     <%= article.description %> 
                 </div>
 
-                <a href="/articles/<%= article.slug %>" class="btn btn--blue">Read More</a>
+                
                 <a href="/articles/edit/<%= article.id %>" class="btn btn--yellow">Edit</a>
                 <form class="u-form-ctrl-inline" action="/articles/<%= article.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="btn btn--red btn--submit">Delete</button>

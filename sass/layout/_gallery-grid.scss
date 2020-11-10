@@ -1,0 +1,51 @@
+.flexbox {
+    animation: fadeIn 2s;
+   
+    &__row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 100rem;
+        width: 90%;
+        // background-color: lightcoral;
+        // border: 1px solid black;
+        margin: 0 auto;
+    }
+
+    &__item {
+        height: 22rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        margin: 1%;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.05);
+            
+        }
+    }
+}
+
+@media (max-width: 50rem) {
+    .flexbox {
+    
+        &__row {
+            flex-direction: column;
+        }
+        
+        &__item {
+            height: 30rem;
+ 
+        }
+    }
+}
+
+// @keyframes fadeIn {
+//     0% {
+//         opacity:0;
+//     }
+//     100% {
+//         opacity:1;
+//     }
+// }

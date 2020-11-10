@@ -2,6 +2,12 @@
 <%- include('../partials/navbar.ejs', {obj: obj}) %>
 
 <div class="u-container">
+
+    <div class="login-container">
+        <a href="/login" class="btn btn--blue">Login</a>
+        <p><==   A login portal for the website owner to manage their blog articles. For demo purposes :)</p>
+    </div>
+
     <div class="articles-container">
         <% articles.forEach(article => { %>
     
