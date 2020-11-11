@@ -76,3 +76,16 @@
       opacity: 0
     }
 }
+
+@media screen and (max-width: 1040px) {
+  .slideshow { 
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 75vh;
+    // display: none;
+  }
+}
