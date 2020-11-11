@@ -26,7 +26,7 @@ require('dotenv').config();
 
 
 // MONGOOSE CONFIG 
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect('mongodb+srv://Lenny:gjEscmfHwQ9g4QH@cluster0.gpyzl.mongodb.net/portfolio?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
