@@ -26,7 +26,7 @@ require('dotenv').config();
 
 
 // MONGOOSE CONFIG 
-mongoose.connect('mongodb://localhost:27017/blog', {
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
