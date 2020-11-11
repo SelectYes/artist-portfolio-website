@@ -10,6 +10,7 @@ const passport                  = require('passport');
 const localStrategy             = require('passport-local');
 const passportLocalMongoose     = require('passport-local-mongoose');
 const session                   = require('express-session');
+var MongoStore                  = require("connect-mongo")(session);
 
 //MISC
 const PORT                      = 3000;
@@ -45,7 +46,9 @@ app.use(methodOverride('_method'));
 app.use(session({
     secret: "Benny is the cutest and best dog in the entire universe",
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    cookie: { maxAge: 180 * 60 * 1000 } // 180 minutes session expiration
 }));
 app.use(passport.initialize());
 app.use(passport.session());
