@@ -13,7 +13,7 @@ const session                   = require('express-session');
 var MongoStore                  = require("connect-mongo")(session);
 
 //MISC
-const PORT                      = 3000;
+const PORT                      = process.env.PORT || 3000;
 const clearDB                   = require('./public/js/delete');
 
 //MODELS
