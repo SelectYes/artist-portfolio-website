@@ -20,7 +20,7 @@ const clearDB                   = require('./public/js/delete');
 const User                      = require('./models/user');
 
 // ENV VARIABLES
-require('dotenv').config();
+if (app.get('env') == 'development'){ require('dotenv').config(); }
 
 
 // =======================================================================================//
