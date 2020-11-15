@@ -207,7 +207,7 @@ body {
   display: inline-block;
   left: 50%;
   transform: translate(-50%, 0);
-  height: 75vh; }
+  height: 65vh; }
   .slideshow__list {
     top: 0;
     left: 0;
@@ -359,7 +359,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100rem;
-  height: 20vh;
+  height: 15vh;
   padding: 2.5rem 0;
   margin: 0 auto; }
 
